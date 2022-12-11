@@ -1,0 +1,22 @@
+plugins {
+    id "io.freefair.lombok" version "6.6"
+    id 'java'
+}
+
+group 'de.kurzware.experiment.fileimport'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'com.h2database:h2:2.1.214'
+    implementation 'ch.qos.logback:logback-classic:1.4.5'
+}
+
+test {
+    useJUnitPlatform()
+}
